@@ -17,6 +17,7 @@
 ## Author: |c0080ffTyx|r
 ## Version 1.0.0
 ## APIVersion: 100030
+## OptionalDependsOn: LibDebugLogger
 
 ###############
 ## QuickMute ##

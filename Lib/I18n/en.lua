@@ -9,8 +9,14 @@ QuickMute = QuickMute or {}
 
 --- German translation for bindings
 QuickMute.i18n = {
-	toggle_audio	= "Toggle Audio",
-	toggle_music	= "Toggle Music",
-	toggle_sound	= "Toggle Sound",
-	print			= "<<1>> was changed to <<2>>"
+	audio 		= "audio",
+	music 		= "music",
+	sound 		= "sound",
+	toggle 		= "toggle",
+	menu		= "<<C:1>> <<C:2>>",
+	change		= "<<C:1>> was changed to <<2>>.",
+	help		= "Use the command /mute [audio|sound|music] to toggle the mute status.",
+	enabled 	= "enabled",
+	disabled 	= "disabled",
+	output		= "<<C:1>> is <<2>>."
 }

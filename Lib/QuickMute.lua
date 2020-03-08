@@ -5,6 +5,13 @@
     Updated:    020-03-08
     License:    GPL-3.0
 ----------------------------------------------]]--
+local d = function() end
+local p = function(...) CHAT_SYSTEM:AddMessage(...) end
+if LibDebugLogger then
+    local l = LibDebugLogger("QuickMute")
+    d = function(...) l:Debug(...) end
+    p = function(...) l:Info(...) end
+end
 -- -----------------------------------------
 -- Bindings
 -- -----------------------------------------
@@ -13,6 +20,7 @@ local values = {}
 --- Function to set a setting to a value
 --- @param setting number of global setting
 --- @param name string of value
+--- @return string new value
 local function SetAudio(setting, name)
     local value
     if values[name] then
@@ -28,20 +36,46 @@ local function SetAudio(setting, name)
         end
     end
     SetSetting(SETTING_TYPE_AUDIO, setting, value, DO_NOT_SAVE_TO_PERSISTED_DATA)
-    -- d(zo_strformat(QuickMute.i18n.print, QuickMute.i18n["toggle_" .. name], value))
+    d(zo_strformat(QuickMute.i18n.change, QuickMute.i18n[name], value))
+    return value
 end
 
 --- Function to toggle the in-game sound
+--- @return string new value
 function QUICK_MUTE_TOGGLE_SOUND()
-    SetAudio(AUDIO_SETTING_SOUND_ENABLED, "sound")
+    return SetAudio(AUDIO_SETTING_SOUND_ENABLED, "sound")
 end
 
 --- Function to toggle the in-game music
+--- @return string new value
 function QUICK_MUTE_TOGGLE_MUSIC()
-    SetAudio(AUDIO_SETTING_MUSIC_ENABLED, "music")
+    return SetAudio(AUDIO_SETTING_MUSIC_ENABLED, "music")
 end
 
 --- Function to toggle the in-game audio
+--- @return string new value
 function QUICK_MUTE_TOGGLE_AUDIO()
-    SetAudio(AUDIO_SETTING_AUDIO_ENABLED, "audio")
+    return SetAudio(AUDIO_SETTING_AUDIO_ENABLED, "audio")
+end
+
+--- Register the slash command /mute
+SLASH_COMMANDS["/mute"] = function(...)
+    local command = string.lower(select(1, ...))
+    local str = "enabled"
+    local value
+    if command == "" or command == "audio" then
+        command = "audio"
+        value = QUICK_MUTE_TOGGLE_AUDIO()
+    elseif command == "music" then
+        value = QUICK_MUTE_TOGGLE_MUSIC()
+    elseif command == "sound" then
+        value = QUICK_MUTE_TOGGLE_SOUND()
+    else
+        p(QuickMute.i18n.error)
+        return
+    end
+    if value == '0' then
+        str = 'disabled'
+    end
+    p(zo_strformat(QuickMute.i18n.output, QuickMute.i18n[command], str))
 end

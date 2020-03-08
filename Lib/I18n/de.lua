@@ -9,8 +9,14 @@ QuickMute = QuickMute or {}
 
 --- German translation for bindings
 QuickMute.i18n = {
-	toggle_audio	= "Audio umschalten",
-	toggle_music	= "Musik umschalten",
-	toggle_sound	= "Klangeffekte umschalten",
-	print			= "<<1>> wurde geändert zu <<2>>"
+	audio 		= "Audio",
+	music 		= "Musik",
+	sound 		= "Klangeffekte",
+	toggle 		= "umschalten",
+	menu		= "<<C:2>> <<C:1>>",
+	change		= "<<C:1>> wurde zu <<2>> geändert.",
+	help		= "Verwenden Sie den Befehl /mute [audio|sound|music], um den Stummschaltungsstatus umzuschalten.",
+	enabled 	= "aktiviert",
+	disabled 	= "deaktiviert",
+	output		= "<<C:1>> wurde <<2>>."
 }
