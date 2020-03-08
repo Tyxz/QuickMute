@@ -63,13 +63,16 @@ SLASH_COMMANDS["/mute"] = function(...)
     local command = string.lower(select(1, ...))
     local str = "enabled"
     local value
-    if command == "" or command == "audio" then
-        command = "audio"
+    -- Patterns are not perfect. They should work because music is tested before sound though.
+    if command == "" or string.find(command, "[aA]%S*") then
         value = QUICK_MUTE_TOGGLE_AUDIO()
-    elseif command == "music" then
+        command = "audio"
+    elseif string.find(command, "[mM]%S*") then
         value = QUICK_MUTE_TOGGLE_MUSIC()
-    elseif command == "sound" then
+        command = "music"
+    elseif string.find(command, "[sS]%S*") then
         value = QUICK_MUTE_TOGGLE_SOUND()
+        command = "sound"
     else
         p(QuickMute.i18n.error)
         return

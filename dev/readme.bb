@@ -17,7 +17,7 @@ Create a shortcut to quickly mute the complete audio, the sound or the music. If
 You have to set the controls yourself. Initially, they have no binding.
 
 [FONT=Arial Black][SIZE=5][COLOR=Orange][B]Commands[/B][/COLOR][/SIZE][/FONT][LIST]
-[*][B]/mute [audio] [/B] toggle the mute status of the complete audio
-[*][B]/mute music[/B] toggle the mute status of the music
-[*][B]/mute sound[/B] toggle the mute status of the sound
-[*][B]/mute help[/B] see a help output in the chat window[/LIST][/SIZE]
+[*][SIZE=4][B]/mute [audio] [/B] toggle the mute status of the complete audio[/SIZE]
+[*][SIZE=4][B]/mute m[usic][/B] toggle the mute status of the music[/SIZE]
+[*][SIZE=4][B]/mute s[ound][/B] toggle the mute status of the sound[/SIZE]
+[*][SIZE=4][B]/mute help[/B] see a help output in the chat window[/SIZE][/LIST][/SIZE]

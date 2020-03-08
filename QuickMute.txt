@@ -15,7 +15,7 @@
 ## Title: QuickMute
 ## Description: Adds a binding to quickly mute the sound and music
 ## Author: |c0080ffTyx|r
-## Version 1.0.0
+## Version 1.0.1
 ## APIVersion: 100030
 ## OptionalDependsOn: LibDebugLogger
 

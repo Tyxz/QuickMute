@@ -5,7 +5,7 @@
 
 |   |   |   |
 |---|---|---|
-| Version: | 1.0.0 |  |
+| Version: | 1.0.1 |  |
 | Build for game version: | 100030 | [![Download](https://img.shields.io/website?label=%7C&up_color=blue&up_message=download&url=https%3A%2F%2Fwww.esoui.com%2Fdownloads%2Finfo2557-QuickMute.html)](https://www.esoui.com/downloads/info2557-QuickMute.html) |
 
 ![Audio](./dev/screenshot_audio.jpg "Audio menu") 
@@ -18,8 +18,8 @@ You have to set the controls yourself. Initially, they have no binding.
 
 ## Commands
 - **/mute \[audio\]** toggle the mute status of the complete audio
-- **/mute music** toggle the mute status of the music
-- **/mute sound** toggle the mute status of the sound
+- **/mute m\[usic]** toggle the mute status of the music 
+- **/mute s\[ound]** toggle the mute status of the sound
 - **/mute help** see a help output in the chat window
 
 ## Copyright
