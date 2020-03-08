@@ -7,11 +7,14 @@
 ----------------------------------------------]]--
 local d = function() end
 local p = function(...) CHAT_SYSTEM:AddMessage(...) end
+
+-- Will use LibDebugLogger if installed
 if LibDebugLogger then
     local l = LibDebugLogger("QuickMute")
     d = function(...) l:Debug(...) end
     p = function(...) l:Info(...) end
 end
+
 -- -----------------------------------------
 -- Bindings
 -- -----------------------------------------
@@ -58,9 +61,13 @@ function QUICK_MUTE_TOGGLE_AUDIO()
     return SetAudio(AUDIO_SETTING_AUDIO_ENABLED, "audio")
 end
 
---- Register the slash command /mute
-SLASH_COMMANDS["/mute"] = function(...)
-    local command = string.lower(select(1, ...))
+-- -----------------------------------------
+-- Commands
+-- -----------------------------------------
+
+--- Function to parse the slash command /mute
+--- @param command string with the input command. If empty, it will be interpreted as "audio".
+local function ParseCommand(command)
     local str = "enabled"
     local value
     -- Patterns are not perfect. They should work because music is tested before sound though.
@@ -74,7 +81,7 @@ SLASH_COMMANDS["/mute"] = function(...)
         value = QUICK_MUTE_TOGGLE_SOUND()
         command = "sound"
     else
-        p(QuickMute.i18n.error)
+        p(QuickMute.i18n.help)
         return
     end
     if value == '0' then
@@ -82,3 +89,5 @@ SLASH_COMMANDS["/mute"] = function(...)
     end
     p(zo_strformat(QuickMute.i18n.output, QuickMute.i18n[command], str))
 end
+
+SLASH_COMMANDS["/mute"] = ParseCommand
