@@ -8,11 +8,11 @@ A small addon for Elder Scrolls Online (no affiliation), to quickly mute the com
 [/SIZE][/CENTER]
 
 [SIZE=4]
-[IMG]https://github.com/Tyxz/QuickMute/blob/master/dev/screenshot_audio.jpg[/IMG]
+[IMG]https://raw.githubusercontent.com/Tyxz/QuickMute/master/dev/screenshot_audio.jpg[/IMG]
 
 Create a shortcut to quickly mute the complete audio, the sound or the music. If you use the shortcut again, the audio will be also unmuted again.
 
-[IMG]https://github.com/Tyxz/QuickMute/blob/master/dev/screenshot_controls.jpg[/IMG]
+[IMG]https://raw.githubusercontent.com/Tyxz/QuickMute/master/dev/screenshot_controls.jpg[/IMG]
 
 You have to set the controls yourself. Initially, they have no binding.
 

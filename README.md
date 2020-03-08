@@ -6,7 +6,7 @@
 |   |   |   |
 |---|---|---|
 | Version: | 1.0.0 |  |
-| Build for game version: | 100030 | [![Download](https://img.shields.io/website?label=%7C&up_color=blue&up_message=download&url=https%3A%2F%2Fwww.esoui.com%2Fdownloads%2Finfo1767-SlowDialogs-CustomControlPatch.html)](https://www.esoui.com/downloads/info1767-SlowDialogs-CustomControlPatch.html) |
+| Build for game version: | 100030 | [![Download](https://img.shields.io/website?label=%7C&up_color=blue&up_message=download&url=https%3A%2F%2Fwww.esoui.com%2Fdownloads%2Finfo2557-QuickMute.html)](https://www.esoui.com/downloads/info2557-QuickMute.html) |
 
 ![Audio](./dev/screenshot_audio.jpg "Audio menu") 
 
