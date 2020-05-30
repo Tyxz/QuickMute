@@ -5,7 +5,7 @@
 
 |   |   |   |
 |---|---|---|
-| Version: | 1.0.1 |  |
+| Version: | 1.0.1 | [![Documentation](https://img.shields.io/website?label=%7C&up_color=important&up_message=documentation&url=https%3A%2F%2Ftyxz.github.io%2FQuickMute%2F)](https://tyxz.github.io/QuickMute/) |  
 | Build for game version: | 100030 | [![Download](https://img.shields.io/website?label=%7C&up_color=blue&up_message=download&url=https%3A%2F%2Fwww.esoui.com%2Fdownloads%2Finfo2557-QuickMute.html)](https://www.esoui.com/downloads/info2557-QuickMute.html) |
 
 ![Audio](./dev/screenshot_audio.jpg "Audio menu") 

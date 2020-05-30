@@ -61,6 +61,13 @@ function QUICK_MUTE_TOGGLE_AUDIO()
     return SetAudio(AUDIO_SETTING_AUDIO_ENABLED, "audio")
 end
 
+--- Function to toggle the in-game npc voices
+--- By EsP from esoui.com
+--- @return string new value
+function QUICK_MUTE_TOGGLE_VOICE()
+    return SetAudio(AUDIO_SETTING_VO_ENABLED, "voice")
+end
+
 -- -----------------------------------------
 -- Commands
 -- -----------------------------------------
@@ -80,6 +87,9 @@ local function ParseCommand(command)
     elseif string.find(command, "[sS]%S*") then
         value = QUICK_MUTE_TOGGLE_SOUND()
         command = "sound"
+    elseif string.find(command, "[vV]%S*") then
+        value = QUICK_MUTE_TOGGLE_VOICE()
+        command = "voice"
     else
         p(QuickMute.i18n.help)
         return

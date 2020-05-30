@@ -12,6 +12,7 @@ QuickMute.i18n = {
 	audio 		= "Audio",
 	music 		= "Musik",
 	sound 		= "Klangeffekte",
+	voice 		= "Stimmen",
 	toggle 		= "umschalten",
 	menu		= "<<C:2>> <<C:1>>",
 	change		= "<<C:1>> wurde zu <<2>> geändert.",

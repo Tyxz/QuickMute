@@ -10,6 +10,9 @@
 			<Action name="QUICK_MUTE_TOGGLE_SOUND">
 				<Down>QUICK_MUTE_TOGGLE_SOUND()</Down>
 			</Action>
+			<Action name="QUICK_MUTE_TOGGLE_VOICE">
+				<Down>QUICK_MUTE_TOGGLE_VOICE()</Down>
+			</Action>
 		</Category>
 	</Layer>
 </Bindings>
